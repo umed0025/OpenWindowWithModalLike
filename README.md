@@ -15,3 +15,12 @@
 
 * [JavaScript window.open: Display Modal Popup Window](https://www.aspsnippets.com/Articles/JavaScript-windowopen-Display-Modal-Popup-Window.aspx)
 * [window.openでモーダルぽくする](https://qiita.com/bassyaroo/items/6566d06e27fdd970dc01)
+
+# 確認環境
+
+* OS:Window 10 Pro 21H2
+* Browser
+    * Chrome 102.0.5005.63
+    * Microsoft Edge 102.0.1245.33
+* Visual Studio Code
+    * Live Server
