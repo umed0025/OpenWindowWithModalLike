@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script>
+      function blockOpenerWindow(){
+        window.opener.blockMainWindow();
+      }
+      function unBlockOpenerWindow(){
+        window.opener.unBlockMainWindow();
+      }
+
+      function closeWindow() {
+        window.close();
+      }
+      function closingWindow() {
+        if (window.opener != null && !window.opener.closed) {
+          window.opener.unBlockMainWindow();
+        }
+      }
+      window.onunload = closingWindow;
+    </script>
+  </head>
+  <body>
+    <script>
+    </script>
+    <input id="blockMainWindowButton" type="button" value="block opener window" onclick="blockOpenerWindow();"/>
+    <br/>
+    <input id="unBlockMainWindowButton" type="button" value="un block opener window" onclick="unBlockOpenerWindow();"/>
+    <br/>
+    <input id="closeWindowButton" type="button" value="close window" onclick="closeWindow();"/>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script>
+      function openChildWindow() {
+        const targetUrl = "child.html";
+        var windowName = "modalWindowChild";
+        var windowFeatures =
+          "width=200," +
+          "height=200," +
+          "left=490," +
+          "top=300," + 
+          "toolbar=no," +
+          "menubar=no"
+        blockMainWindow();
+        var childWindow = window.open(targetUrl, windowName, windowFeatures);
+        // フォーカス制御
+        // var interval = setInterval(function(){
+        //   if(!childWindow || childWindow.closed)
+        //   {
+        //       unBlockMainWindow();
+        //       clearInterval(interval);
+        //   }
+        //   else
+        //   {
+        //     if(!childWindow.document.hasFocus())
+        //     {
+        //       childWindow.focus();
+        //     }
+        //   }
+        // }
+        // ,1 * 1000);
+      }
+      function blockMainWindow() {
+        var blockWindowDiv = document.getElementById("blockWindowDiv");
+        blockWindowDiv.style.display = "block";
+      }
+      function unBlockMainWindow() {
+        var bcgDiv = document.getElementById("blockWindowDiv");
+        blockWindowDiv.style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <input id="openWindowButton" type="button" value="open window" onclick="openChildWindow();"/>
+    <div id="blockWindowDiv" style="height: 100%; width: 100%; position: fixed; top: 0; left:0; z-index: 999;
+      background-color: Black; opacity: 0.4; filter: alpha(opacity=40); display:none">
+  </body>
+</html>
