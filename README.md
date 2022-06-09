@@ -32,4 +32,4 @@
     * 非同期処理でdialog#showModalが動いてしまうためcallback実装が不可欠。
 * jQuery ui dialogを使用した実装方法。
     * ウィンドウの外に出せないためフレームタイプの画面には向かない。
-    * 非同期処理でdialog#showModalが動いてしまうためcallback実装またはPromise実装が必要。W
+    * 非同期処理で動いてしまうためcallback実装またはPromise実装が必要。

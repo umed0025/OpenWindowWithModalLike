@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+  function openDialog(){
+    var dialog1 = document.getElementById("dialog1");
+    dialog1.showModal();
+    alert("dialog opened");
+  }
+  function okDialog(){
+    alert("ok");
+    dialog1.close();
+  }
+  function cnacelDialog(){
+    alert("cancel");
+    var dialog1 = document.getElementById("dialog1");
+    dialog1.close();
+  }
+</script>
+</head>
+<body>
+  <dialog id="dialog1">
+    <p>message</p><br/>
+    <input type="button" id="okButton" value="Ok" onclick="okDialog();"/>
+    <input type="button" id="cancelButton" value="Cancel" onclick="cnacelDialog();"/>
+  </dialog>
+  <input type="button" id="button1" value="dialog" onclick="openDialog()"/>
+</body>
+</html>
