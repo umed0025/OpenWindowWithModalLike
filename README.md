@@ -24,3 +24,12 @@
     * Microsoft Edge 102.0.1245.33
 * Visual Studio Code
     * Live Server
+
+# 今回触れなかった代替実装について
+
+* Html 5.2以降提供されているdialogエレメントを使用した実装方法。
+    * ウィンドウの外に出せないためフレームタイプの画面には向かない。
+    * 非同期処理でdialog#showModalが動いてしまうためcallback実装が不可欠。
+* jQuery ui dialogを使用した実装方法。
+    * ウィンドウの外に出せないためフレームタイプの画面には向かない。
+    * 非同期処理でdialog#showModalが動いてしまうためcallback実装またはPromise実装が必要。W
